@@ -1,5 +1,4 @@
-map(映射)
-=
+## map(映射)
 ---
 首先要在C++源文件中包含``<map>``头文件
 定义map变量方式如下:``map<int,string>M``(int和string的类型可变化),表示以int型为索引元素成员为string(表述可能不准确)
