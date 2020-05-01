@@ -263,7 +263,8 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1>KMP</h1>
+      <h2 class="mume-header" id="kmp">KMP</h2>
+
 <hr>
 <p>KMP&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;:</p>
 <p>&#x67E5;&#x627E;&#x76EE;&#x6807;&#x4E32;&#x5728;&#x4E3B;&#x4E32;&#x4E2D;&#x7684;&#x91CD;&#x590D;&#x6B21;&#x6570;:</p>
@@ -272,6 +273,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdlib.h&gt;</span></span>
 
 <span class="token keyword">char</span> W<span class="token punctuation">[</span><span class="token number">10005</span><span class="token punctuation">]</span><span class="token punctuation">,</span> T<span class="token punctuation">[</span><span class="token number">1000005</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> len_W<span class="token punctuation">,</span> len_T<span class="token punctuation">;</span>
 
 <span class="token keyword">void</span> <span class="token function">next_</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> next<span class="token punctuation">,</span> <span class="token keyword">int</span> len_W<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	<span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
@@ -281,7 +283,7 @@ pre[data-line] .line-highlight[data-end]:after {
 			<span class="token operator">++</span>i<span class="token punctuation">;</span>
 			<span class="token operator">++</span>j<span class="token punctuation">;</span>
 			next<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> j<span class="token punctuation">;</span>
-			<span class="token comment">//&#x867D;&#x7136;while&#x9650;&#x5B9A;i&#x5230;len_W-2,&#x4F46;&#x662F;&#x8FD0;&#x884C;&#x5230;len_W-2&#x65F6;,i&#x81EA;&#x589E;&#x4E3A;len_W-1</span>
+
 		<span class="token punctuation">}</span>
 		<span class="token keyword">else</span> <span class="token punctuation">{</span>
 			j <span class="token operator">=</span> next<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -319,17 +321,15 @@ pre[data-line] .line-highlight[data-end]:after {
 <span class="token punctuation">}</span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-	<span class="token keyword">int</span> len_W <span class="token operator">=</span> <span class="token function">strlen</span><span class="token punctuation">(</span>W<span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token keyword">int</span> len_T <span class="token operator">=</span> <span class="token function">strlen</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">int</span> n<span class="token punctuation">;</span>
 	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d\n&quot;</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">while</span> <span class="token punctuation">(</span>n<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-		<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%s%s&quot;</span><span class="token punctuation">,</span> W<span class="token punctuation">,</span> T<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
+		<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%s%s&quot;</span><span class="token punctuation">,</span> T<span class="token punctuation">,</span> W<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		len_W <span class="token operator">=</span> <span class="token function">strlen</span><span class="token punctuation">(</span>W<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		len_T <span class="token operator">=</span> <span class="token function">strlen</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span>
 		<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d\n&quot;</span><span class="token punctuation">,</span> <span class="token function">KMP_C</span><span class="token punctuation">(</span>len_W<span class="token punctuation">,</span> len_T<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 	<span class="token punctuation">}</span>
-
 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </pre><p>&#x67E5;&#x627E;&#x76EE;&#x6807;&#x4E32;&#x5728;&#x4E3B;&#x4E32;&#x4E2D;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;(&#x53EA;&#x6539;&#x53D8;kmp&#x51FD;&#x6570;&#x5373;&#x53EF;):</p>
