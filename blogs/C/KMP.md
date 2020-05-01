@@ -1,5 +1,4 @@
-KMP
-=
+## KMP
 ---
 KMP的代码实现:
 
@@ -10,6 +9,7 @@ KMP的代码实现:
 #include<stdlib.h>
 
 char W[10005], T[1000005];
+int len_W, len_T;
 
 void next_(int* next, int len_W) {
 	int i = 0, j = -1;
@@ -19,7 +19,7 @@ void next_(int* next, int len_W) {
 			++i;
 			++j;
 			next[i] = j;
-			//虽然while限定i到len_W-2,但是运行到len_W-2时,i自增为len_W-1
+
 		}
 		else {
 			j = next[j];
@@ -57,17 +57,15 @@ int KMP_C(int len_W, int len_T) {
 }
 
 int main() {
-	int len_W = strlen(W);
-	int len_T = strlen(T);
 	int n;
 	scanf("%d\n", &n);
 	while (n--) {
-		scanf("%s%s", W, T);
-
+		scanf("%s%s", T, W);
+		len_W = strlen(W);
+		len_T = strlen(T);
 		printf("%d\n", KMP_C(len_W, len_T));
 
 	}
-
 	return 0;
 }
 ```
