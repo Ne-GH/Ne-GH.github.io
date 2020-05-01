@@ -1,0 +1,23 @@
+.h_caption{
+	text-align: center;
+	color: dodgerblue;
+}
+
+.a_blogs{
+            	text-decoration: none;
+            	font-size: 25px;
+           	color: dodgerblue;
+}
+
+.ul_none{
+            	list-style: none;
+}
+
+.ul_circle{
+            	list-style-type:circle;
+}
+
+.li_blogs {
+            	font-size: 25px;
+            	color: dodgerblue;
+}
