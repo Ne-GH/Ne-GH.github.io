@@ -2,13 +2,15 @@
             text-align: center;
             color: dodgerblue;
 }
-
-.a_index{
+.ul_none {
+           list-style: none;
+}
+.a_index {
             text-decoration: none;
             font-size: 25px;
-            color:black;
+            color: dodgerblue;
 }
-
-.ul_none{
-            list-style: none;
+.li_index {
+            font-size: 25px;
+            color: dodgerblue;
 }
