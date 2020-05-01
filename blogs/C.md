@@ -6,3 +6,4 @@
     + [队列](./C/队列.html)
     + [栈](./C/栈.html)
     + [map](./C/map.html)
+* <a href="./C/KMP.html">KMP算法的实现</a>
