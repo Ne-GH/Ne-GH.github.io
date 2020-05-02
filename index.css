@@ -1,3 +1,4 @@
+
 .h_caption{
             text-align: center;
             color: dodgerblue;
@@ -11,6 +12,19 @@
             color: dodgerblue;
 }
 .li_index {
+            font-size: 25px;
+            color: dodgerblue;
+}
+#navigation{
+	color:black;
+	line-height:30px;
+	background-color:#eeeeee;
+	height:6000px;
+	width:130px;
+	float:left;
+}
+#a_navigation{
+            text-decoration: none;
             font-size: 25px;
             color: dodgerblue;
 }
