@@ -7,7 +7,7 @@
 打开VS,打开一个文件夹及文件,在调试页面选择"create a launch.json file",弹出的地方选择第一个C++(GDB/LLDB)和g++.exe(测试文件是cpp类型才有该选项,如果是C文件,仅有gcc,文本内容在后面)
 
 对于生成的launch.json中的代码我们用以下代码进行替换,如果您使用的Vscode版本过老，以下文件中的``"${workspaceFolder}"``(带上引号)可能需要替换为"${workspaceRoot}"
-```
+```c
 {
    "version": "0.2.0",
    "configurations": [
@@ -44,7 +44,7 @@ miDebuggerPath后的值取自己解压mingw路径中bin文件下的gdb.exe的路
 
 选择配置任务,之后选择g++,用以下代码对tasks.json文件中代码进行替换
 
-```
+```c
 
 {
     "version": "2.0.0",
@@ -74,7 +74,7 @@ miDebuggerPath后的值取自己解压mingw路径中bin文件下的gdb.exe的路
 
 
 launch.json文件
-```
+```c
 {
     "version": "0.2.0",
     "configurations": [
