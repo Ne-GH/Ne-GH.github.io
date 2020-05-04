@@ -270,81 +270,81 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>&#x53EF;&#x5728;dos&#x4E2D;&#x7528;gcc -v&#x67E5;&#x8BE2;&#x662F;&#x5426;&#x6DFB;&#x52A0;&#x6210;&#x529F;</p>
 <p>&#x6253;&#x5F00;VS,&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x53CA;&#x6587;&#x4EF6;,&#x5728;&#x8C03;&#x8BD5;&#x9875;&#x9762;&#x9009;&#x62E9;&quot;create a launch.json file&quot;,&#x5F39;&#x51FA;&#x7684;&#x5730;&#x65B9;&#x9009;&#x62E9;&#x7B2C;&#x4E00;&#x4E2A;C++(GDB/LLDB)&#x548C;g++.exe(&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x662F;cpp&#x7C7B;&#x578B;&#x624D;&#x6709;&#x8BE5;&#x9009;&#x9879;,&#x5982;&#x679C;&#x662F;C&#x6587;&#x4EF6;,&#x4EC5;&#x6709;gcc,&#x6587;&#x672C;&#x5185;&#x5BB9;&#x5728;&#x540E;&#x9762;)</p>
 <p>&#x5BF9;&#x4E8E;&#x751F;&#x6210;&#x7684;launch.json&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x6211;&#x4EEC;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x66FF;&#x6362;,&#x5982;&#x679C;&#x60A8;&#x4F7F;&#x7528;&#x7684;Vscode&#x7248;&#x672C;&#x8FC7;&#x8001;&#xFF0C;&#x4EE5;&#x4E0B;&#x6587;&#x4EF6;&#x4E2D;&#x7684;<code>&quot;${workspaceFolder}&quot;</code>(&#x5E26;&#x4E0A;&#x5F15;&#x53F7;)&#x53EF;&#x80FD;&#x9700;&#x8981;&#x66FF;&#x6362;&#x4E3A;&quot;${workspaceRoot}&quot;</p>
-<pre data-role="codeBlock" data-info class="language-"><code>{
-   &quot;version&quot;: &quot;0.2.0&quot;,
-   &quot;configurations&quot;: [
-       {
-           &quot;name&quot;: &quot;(gdb) Launch&quot;, // &#x914D;&#x7F6E;&#x540D;&#x79F0;&#xFF0C;&#x5C06;&#x4F1A;&#x5728;&#x542F;&#x52A8;&#x914D;&#x7F6E;&#x7684;&#x4E0B;&#x62C9;&#x83DC;&#x5355;&#x4E2D;&#x663E;&#x793A;
-           &quot;type&quot;: &quot;cppdbg&quot;, // &#x914D;&#x7F6E;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x80FD;&#x4E3A;cppdbg
-           &quot;request&quot;: &quot;launch&quot;, // &#x8BF7;&#x6C42;&#x914D;&#x7F6E;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;launch&#xFF08;&#x542F;&#x52A8;&#xFF09;&#x6216;attach&#xFF08;&#x9644;&#x52A0;&#xFF09;
-           &quot;program&quot;: &quot;${workspaceFolder}/${fileBasenameNoExtension}.exe&quot;, // &#x5C06;&#x8981;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#x7684;&#x7A0B;&#x5E8F;&#x7684;&#x8DEF;&#x5F84;
-           &quot;args&quot;: [], // &#x7A0B;&#x5E8F;&#x8C03;&#x8BD5;&#x65F6;&#x4F20;&#x9012;&#x7ED9;&#x7A0B;&#x5E8F;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#xFF0C;&#x4E00;&#x822C;&#x8BBE;&#x4E3A;&#x7A7A;&#x5373;&#x53EF;
-           &quot;stopAtEntry&quot;: false, // &#x8BBE;&#x4E3A;true&#x65F6;&#x7A0B;&#x5E8F;&#x5C06;&#x6682;&#x505C;&#x5728;&#x7A0B;&#x5E8F;&#x5165;&#x53E3;&#x5904;&#xFF0C;&#x4E00;&#x822C;&#x8BBE;&#x7F6E;&#x4E3A;false
-           &quot;cwd&quot;: &quot;${workspaceFolder}&quot;, // &#x8C03;&#x8BD5;&#x7A0B;&#x5E8F;&#x65F6;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;${workspaceRoot}&#x5373;&#x4EE3;&#x7801;&#x6240;&#x5728;&#x76EE;&#x5F55; workspaceRoot&#x5DF2;&#x88AB;&#x5F03;&#x7528;&#xFF0C;&#x73B0;&#x6539;&#x4E3A;workspaceFolder
-           &quot;environment&quot;: [],
-           &quot;externalConsole&quot;: true, // &#x8C03;&#x8BD5;&#x65F6;&#x662F;&#x5426;&#x663E;&#x793A;&#x63A7;&#x5236;&#x53F0;&#x7A97;&#x53E3;&#xFF0C;&#x4E00;&#x822C;&#x8BBE;&#x7F6E;&#x4E3A;true&#x663E;&#x793A;&#x63A7;&#x5236;&#x53F0;
-           &quot;MIMode&quot;: &quot;gdb&quot;,
-           &quot;miDebuggerPath&quot;: &quot;C:/Program Files (x86)/mingw64/bin/gdb.exe&quot;, // miDebugger&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x8981;&#x4E0E;MinGw&#x7684;&#x8DEF;&#x5F84;&#x5BF9;&#x5E94;
-           &quot;preLaunchTask&quot;: &quot;g++&quot;, // &#x8C03;&#x8BD5;&#x4F1A;&#x8BDD;&#x5F00;&#x59CB;&#x524D;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#x7F16;&#x8BD1;&#x7A0B;&#x5E8F;&#xFF0C;c++&#x4E3A;g++, c&#x4E3A;gcc
-           &quot;setupCommands&quot;: [
-               {
-                   &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
-                   &quot;text&quot;: &quot;-enable-pretty-printing&quot;,
-                   &quot;ignoreFailures&quot;: false
-               }
-           ]
-       }
-   ]
-}
-</code></pre><p>miDebuggerPath&#x540E;&#x7684;&#x503C;&#x53D6;&#x81EA;&#x5DF1;&#x89E3;&#x538B;mingw&#x8DEF;&#x5F84;&#x4E2D;bin&#x6587;&#x4EF6;&#x4E0B;&#x7684;gdb.exe&#x7684;&#x8DEF;&#x5F84;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token punctuation">{</span>
+   <span class="token string">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.2.0&quot;</span><span class="token punctuation">,</span>
+   <span class="token string">&quot;configurations&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+       <span class="token punctuation">{</span>
+           <span class="token string">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;(gdb) Launch&quot;</span><span class="token punctuation">,</span> <span class="token comment">// &#x914D;&#x7F6E;&#x540D;&#x79F0;&#xFF0C;&#x5C06;&#x4F1A;&#x5728;&#x542F;&#x52A8;&#x914D;&#x7F6E;&#x7684;&#x4E0B;&#x62C9;&#x83DC;&#x5355;&#x4E2D;&#x663E;&#x793A;</span>
+           <span class="token string">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cppdbg&quot;</span><span class="token punctuation">,</span> <span class="token comment">// &#x914D;&#x7F6E;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x80FD;&#x4E3A;cppdbg</span>
+           <span class="token string">&quot;request&quot;</span><span class="token operator">:</span> <span class="token string">&quot;launch&quot;</span><span class="token punctuation">,</span> <span class="token comment">// &#x8BF7;&#x6C42;&#x914D;&#x7F6E;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;launch&#xFF08;&#x542F;&#x52A8;&#xFF09;&#x6216;attach&#xFF08;&#x9644;&#x52A0;&#xFF09;</span>
+           <span class="token string">&quot;program&quot;</span><span class="token operator">:</span> <span class="token string">&quot;${workspaceFolder}/${fileBasenameNoExtension}.exe&quot;</span><span class="token punctuation">,</span> <span class="token comment">// &#x5C06;&#x8981;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#x7684;&#x7A0B;&#x5E8F;&#x7684;&#x8DEF;&#x5F84;</span>
+           <span class="token string">&quot;args&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// &#x7A0B;&#x5E8F;&#x8C03;&#x8BD5;&#x65F6;&#x4F20;&#x9012;&#x7ED9;&#x7A0B;&#x5E8F;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#xFF0C;&#x4E00;&#x822C;&#x8BBE;&#x4E3A;&#x7A7A;&#x5373;&#x53EF;</span>
+           <span class="token string">&quot;stopAtEntry&quot;</span><span class="token operator">:</span> false<span class="token punctuation">,</span> <span class="token comment">// &#x8BBE;&#x4E3A;true&#x65F6;&#x7A0B;&#x5E8F;&#x5C06;&#x6682;&#x505C;&#x5728;&#x7A0B;&#x5E8F;&#x5165;&#x53E3;&#x5904;&#xFF0C;&#x4E00;&#x822C;&#x8BBE;&#x7F6E;&#x4E3A;false</span>
+           <span class="token string">&quot;cwd&quot;</span><span class="token operator">:</span> <span class="token string">&quot;${workspaceFolder}&quot;</span><span class="token punctuation">,</span> <span class="token comment">// &#x8C03;&#x8BD5;&#x7A0B;&#x5E8F;&#x65F6;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;${workspaceRoot}&#x5373;&#x4EE3;&#x7801;&#x6240;&#x5728;&#x76EE;&#x5F55; workspaceRoot&#x5DF2;&#x88AB;&#x5F03;&#x7528;&#xFF0C;&#x73B0;&#x6539;&#x4E3A;workspaceFolder</span>
+           <span class="token string">&quot;environment&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token string">&quot;externalConsole&quot;</span><span class="token operator">:</span> true<span class="token punctuation">,</span> <span class="token comment">// &#x8C03;&#x8BD5;&#x65F6;&#x662F;&#x5426;&#x663E;&#x793A;&#x63A7;&#x5236;&#x53F0;&#x7A97;&#x53E3;&#xFF0C;&#x4E00;&#x822C;&#x8BBE;&#x7F6E;&#x4E3A;true&#x663E;&#x793A;&#x63A7;&#x5236;&#x53F0;</span>
+           <span class="token string">&quot;MIMode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;gdb&quot;</span><span class="token punctuation">,</span>
+           <span class="token string">&quot;miDebuggerPath&quot;</span><span class="token operator">:</span> <span class="token string">&quot;C:/Program Files (x86)/mingw64/bin/gdb.exe&quot;</span><span class="token punctuation">,</span> <span class="token comment">// miDebugger&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x8981;&#x4E0E;MinGw&#x7684;&#x8DEF;&#x5F84;&#x5BF9;&#x5E94;</span>
+           <span class="token string">&quot;preLaunchTask&quot;</span><span class="token operator">:</span> <span class="token string">&quot;g++&quot;</span><span class="token punctuation">,</span> <span class="token comment">// &#x8C03;&#x8BD5;&#x4F1A;&#x8BDD;&#x5F00;&#x59CB;&#x524D;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#x7F16;&#x8BD1;&#x7A0B;&#x5E8F;&#xFF0C;c++&#x4E3A;g++, c&#x4E3A;gcc</span>
+           <span class="token string">&quot;setupCommands&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+               <span class="token punctuation">{</span>
+                   <span class="token string">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Enable pretty-printing for gdb&quot;</span><span class="token punctuation">,</span>
+                   <span class="token string">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;-enable-pretty-printing&quot;</span><span class="token punctuation">,</span>
+                   <span class="token string">&quot;ignoreFailures&quot;</span><span class="token operator">:</span> false
+               <span class="token punctuation">}</span>
+           <span class="token punctuation">]</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><p>miDebuggerPath&#x540E;&#x7684;&#x503C;&#x53D6;&#x81EA;&#x5DF1;&#x89E3;&#x538B;mingw&#x8DEF;&#x5F84;&#x4E2D;bin&#x6587;&#x4EF6;&#x4E0B;&#x7684;gdb.exe&#x7684;&#x8DEF;&#x5F84;</p>
 <p>&#x4FDD;&#x5B58;&#x540E;&#x6309;F5&#x8FD0;&#x884C;</p>
 <p>&#x63D0;&#x793A;&quot;Could not find the task &apos;g++&apos; &quot;</p>
 <p>&#x9009;&#x62E9;&#x914D;&#x7F6E;&#x4EFB;&#x52A1;,&#x4E4B;&#x540E;&#x9009;&#x62E9;g++,&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5BF9;tasks.json&#x6587;&#x4EF6;&#x4E2D;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x66FF;&#x6362;</p>
-<pre data-role="codeBlock" data-info class="language-"><code>{
-    &quot;version&quot;: &quot;2.0.0&quot;,
-    &quot;command&quot;: &quot;g++&quot;,
-    &quot;args&quot;: [&quot;-g&quot;,&quot;${file}&quot;,&quot;-o&quot;,&quot;${fileBasenameNoExtension}.exe&quot;],    // &#x7F16;&#x8BD1;&#x547D;&#x4EE4;&#x53C2;&#x6570;
-    &quot;problemMatcher&quot;: {
-        &quot;owner&quot;: &quot;cpp&quot;,
-        &quot;fileLocation&quot;: [&quot;relative&quot;, &quot;${workspaceFolder}&quot;],
-        &quot;pattern&quot;: {
-            &quot;regexp&quot;: &quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;,
-            &quot;file&quot;: 1,
-            &quot;line&quot;: 2,
-            &quot;column&quot;: 3,
-            &quot;severity&quot;: 4,
-            &quot;message&quot;: 5
-        }
-    }
-}
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token punctuation">{</span>
+    <span class="token string">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;command&quot;</span><span class="token operator">:</span> <span class="token string">&quot;g++&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;args&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;-g&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;${file}&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;-o&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;${fileBasenameNoExtension}.exe&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>    <span class="token comment">// &#x7F16;&#x8BD1;&#x547D;&#x4EE4;&#x53C2;&#x6570;</span>
+    <span class="token string">&quot;problemMatcher&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;owner&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cpp&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;fileLocation&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;relative&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;${workspaceFolder}&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;pattern&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;regexp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;file&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;line&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;column&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;severity&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;message&quot;</span><span class="token operator">:</span> <span class="token number">5</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
 
-</code></pre><p>&#x7136;&#x540E;&#x6309;F5&#x6709;&#x9ED1;&#x6846;&#x95EA;&#x8FC7;&#x5C31;&#x8BF4;&#x660E;&#x914D;&#x7F6E;&#x6210;&#x529F;&#x4E86;,&#x53EF;&#x4EE5;&#x4E0B;&#x65AD;&#x70B9;&#x6216;&#x7528;getchar()&#x8BED;&#x53E5;&#x4F7F;&#x8FD0;&#x884C;&#x6682;&#x505C;.</p>
+</pre><p>&#x7136;&#x540E;&#x6309;F5&#x6709;&#x9ED1;&#x6846;&#x95EA;&#x8FC7;&#x5C31;&#x8BF4;&#x660E;&#x914D;&#x7F6E;&#x6210;&#x529F;&#x4E86;,&#x53EF;&#x4EE5;&#x4E0B;&#x65AD;&#x70B9;&#x6216;&#x7528;getchar()&#x8BED;&#x53E5;&#x4F7F;&#x8FD0;&#x884C;&#x6682;&#x505C;.</p>
 <p>&#x4E0A;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x9002;&#x7528;&#x4E8E;C++,C&#x53EF;&#x4EE5;&#x8FD0;&#x884C;,&#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;,&#x5982;&#x679C;&#x8981;&#x8C03;&#x8BD5;C&#x6587;&#x4EF6;,&#x64CD;&#x4F5C;&#x4E0E;&#x4E0A;&#x8FF0;&#x5185;&#x7528;&#x57FA;&#x672C;&#x76F8;&#x540C;,&#x4E0D;&#x8FC7;&#x9664;&#x7B2C;&#x4E00;&#x6B65;&#x7684;&#x9009;&#x62E9;C++,&#x5176;&#x4F59;&#x90E8;&#x5206;&#x90FD;&#x9009;gcc,&#x540C;&#x65F6;&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x6709;&#x6240;&#x4E0D;&#x540C;,&#x5982;&#x4E0B;:</p>
 <p>launch.json&#x6587;&#x4EF6;</p>
-<pre data-role="codeBlock" data-info class="language-"><code>{
-    &quot;version&quot;: &quot;0.2.0&quot;,
-    &quot;configurations&quot;: [
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token punctuation">{</span>
+    <span class="token string">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.2.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;configurations&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 
-        {
-            &quot;name&quot;: &quot;(gdb)c_launch&quot;,
-            &quot;type&quot;: &quot;cppdbg&quot;,
-            &quot;request&quot;: &quot;launch&quot;,
-            &quot;targetArchitecture&quot;: &quot;x64&quot;,
-            &quot;program&quot;: &quot;${workspaceFolder}/${fileBasenameNoExtension}.exe&quot;,
-            &quot;miDebuggerPath&quot;: &quot;E:/VS_code/mingw/mingw64/bin/gdb.exe&quot;,//&#x81EA;&#x5DF1;&#x7684;gdb.exe&#x76EE;&#x5F55;
-            &quot;MIMode&quot;: &quot;gdb&quot;,
-            &quot;args&quot;: [],
-            &quot;stopAtEntry&quot;: false,
-            &quot;cwd&quot;: &quot;${workspaceRoot}&quot;,
-            &quot;environment&quot;: [],
-            &quot;internalConsoleOptions&quot;: &quot;openOnFirstSessionStart&quot;,
-            &quot;externalConsole&quot;: true,
-            &quot;preLaunchTask&quot;: &quot;gcc&quot;
-        }
-    ]
-}
-</code></pre><p>tesks.json&#x6587;&#x4EF6;</p>
+        <span class="token punctuation">{</span>
+            <span class="token string">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;(gdb)c_launch&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cppdbg&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;request&quot;</span><span class="token operator">:</span> <span class="token string">&quot;launch&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;targetArchitecture&quot;</span><span class="token operator">:</span> <span class="token string">&quot;x64&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;program&quot;</span><span class="token operator">:</span> <span class="token string">&quot;${workspaceFolder}/${fileBasenameNoExtension}.exe&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;miDebuggerPath&quot;</span><span class="token operator">:</span> <span class="token string">&quot;E:/VS_code/mingw/mingw64/bin/gdb.exe&quot;</span><span class="token punctuation">,</span><span class="token comment">//&#x81EA;&#x5DF1;&#x7684;gdb.exe&#x76EE;&#x5F55;</span>
+            <span class="token string">&quot;MIMode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;gdb&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;args&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;stopAtEntry&quot;</span><span class="token operator">:</span> false<span class="token punctuation">,</span>
+            <span class="token string">&quot;cwd&quot;</span><span class="token operator">:</span> <span class="token string">&quot;${workspaceRoot}&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;environment&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;internalConsoleOptions&quot;</span><span class="token operator">:</span> <span class="token string">&quot;openOnFirstSessionStart&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;externalConsole&quot;</span><span class="token operator">:</span> true<span class="token punctuation">,</span>
+            <span class="token string">&quot;preLaunchTask&quot;</span><span class="token operator">:</span> <span class="token string">&quot;gcc&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><p>tesks.json&#x6587;&#x4EF6;</p>
 <pre data-role="codeBlock" data-info class="language-"><code>{
     &quot;version&quot;: &quot;2.0.0&quot;,
     &quot;command&quot;: &quot;gcc&quot;,
