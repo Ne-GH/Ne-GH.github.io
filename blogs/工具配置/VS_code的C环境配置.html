@@ -345,52 +345,53 @@ pre[data-line] .line-highlight[data-end]:after {
     <span class="token punctuation">]</span>
 <span class="token punctuation">}</span>
 </pre><p>tesks.json&#x6587;&#x4EF6;</p>
-<pre data-role="codeBlock" data-info class="language-"><code>{
-    &quot;version&quot;: &quot;2.0.0&quot;,
-    &quot;command&quot;: &quot;gcc&quot;,
-    &quot;args&quot;: [&quot;-Wall&quot;, &quot;-g&quot;, &quot;${file}&quot;, &quot;-o&quot;, &quot;${fileBasenameNoExtension}.exe&quot;],
-    &quot;echoCommand&quot;: true,
-    &quot;problemMatcher&quot;: {
-        &quot;owner&quot;: &quot;cpp&quot;,
-        &quot;fileLocation&quot;: [&quot;relative&quot;, &quot;${workspaceFolder}&quot;],
-        &quot;pattern&quot;: {
-            &quot;regexp&quot;: &quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;,
-            &quot;file&quot;: 1,
-            &quot;line&quot;: 2,
-            &quot;column&quot;: 3,
-            &quot;severity&quot;: 4,
-            &quot;message&quot;: 5
-        }
-    }
-}
-</code></pre><p>&#x6700;&#x540E;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;c_cpp_properties.json&#x6587;&#x4EF6;,&#x5982;&#x679C;&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x6CA1;&#x6709;&#x63D0;&#x793A;&#x627E;&#x4E0D;&#x5230;&#x5934;&#x6587;&#x4EF6;,&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E0D;&#x8981;&#x4E5F;&#x7F62;</p>
-<pre data-role="codeBlock" data-info class="language-"><code>{
-    &quot;configurations&quot;: [
-        {
-            &quot;name&quot;: &quot;Win32&quot;,
-            &quot;includePath&quot;: [
-                &quot;${workspaceFolder}&quot;
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token punctuation">{</span>
+    <span class="token string">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;command&quot;</span><span class="token operator">:</span> <span class="token string">&quot;gcc&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;args&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;-Wall&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;-g&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;${file}&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;-o&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;${fileBasenameNoExtension}.exe&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;echoCommand&quot;</span><span class="token operator">:</span> true<span class="token punctuation">,</span>
+    <span class="token string">&quot;problemMatcher&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;owner&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cpp&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;fileLocation&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;relative&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;${workspaceFolder}&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;pattern&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;regexp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;file&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;line&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;column&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;severity&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;message&quot;</span><span class="token operator">:</span> <span class="token number">5</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>&#x6700;&#x540E;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;c_cpp_properties.json&#x6587;&#x4EF6;,&#x5982;&#x679C;&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x6CA1;&#x6709;&#x63D0;&#x793A;&#x627E;&#x4E0D;&#x5230;&#x5934;&#x6587;&#x4EF6;,&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E0D;&#x8981;&#x4E5F;&#x7F62;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token punctuation">{</span>
+    <span class="token string">&quot;configurations&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Win32&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;includePath&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;${workspaceFolder}&quot;</span>
                
-            ],
-            &quot;defines&quot;: [
-                &quot;_DEBUG&quot;,
-                &quot;UNICODE&quot;,
-                &quot;_UNICODE&quot;
-            ],
-            &quot;compilerPath&quot;: &quot;D:/Program Files/mingw64/bin/gcc.exe&quot;,
-            &quot;intelliSenseMode&quot;: &quot;msvc-x64&quot;,
-            &quot;browse&quot;: {
-                &quot;path&quot;: [
-                    &quot;${workspaceRoot}&quot;     
-                ],
-                &quot;limitSymbolsToIncludedHeaders&quot;: true,
-                &quot;databaseFilename&quot;: &quot;&quot;
-            }
-        }
-    ],
-    &quot;version&quot;: 4
-}
-</code></pre>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;defines&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;_DEBUG&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;UNICODE&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;_UNICODE&quot;</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;compilerPath&quot;</span><span class="token operator">:</span> <span class="token string">&quot;D:/Program Files/mingw64/bin/gcc.exe&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;intelliSenseMode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;msvc-x64&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;browse&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token string">&quot;path&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;${workspaceRoot}&quot;</span>     
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;limitSymbolsToIncludedHeaders&quot;</span><span class="token operator">:</span> true<span class="token punctuation">,</span>
+                <span class="token string">&quot;databaseFilename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;version&quot;</span><span class="token operator">:</span> <span class="token number">4</span>
+<span class="token punctuation">}</span>
+</pre><p>Linux&#x4E0B;&#x7684;&#x53EF;&#x8C03;&#x5F0F;&#x914D;&#x7F6E;&#x4F7F;&#x7528;vs code&#x7ED9;&#x51FA;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x7248;&#x5373;&#x53EF;</p>
+
       </div>
       
       
