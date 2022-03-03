@@ -16,8 +16,10 @@ DISK(){
     yes | mkfs.fat -F 32 "$DEVDISK$ONE"
     yes | mkfs.ext4 "$DEVDISK$TWO"
 
-    mkdir -p /mnt/boot/efi
+    
     mount "$DEVDISK$TWO" /mnt
+    
+    mkdir -p /mnt/boot/efi
     mount "$DEVDISK$ONE" /mnt/boot/efi
 
 
