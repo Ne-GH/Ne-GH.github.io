@@ -5,11 +5,13 @@ STARTINSTALL(){
     TWO="2"
     THREE="3"
     DEVSTR="/dev/"
-    DEVDISK="$DEVSTR$DISK"
-
+    EFIDISKSIZE="+128M"
+    
+    
     lsblk
-    echo -en "Please input your disk number (such as : /dev/sdbx)"
+    echo -en "Please input your disk number (such as : sda)"
     read DISK
+    DEVDISK="$DEVSTR$DISK"
     echo $DISK
     echo $DEVDISK
 
