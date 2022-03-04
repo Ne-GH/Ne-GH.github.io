@@ -19,7 +19,7 @@ ChrootFront(){
     yes | mkfs.fat -F 32 "$DEVDISK$ONE"
     yes | mkfs.ext4 "$DEVDISK$TWO"
 
-    
+   
     mount "$DEVDISK$TWO" /mnt
     mkdir -p /mnt/boot/efi
     mount "$DEVDISK$ONE" /mnt/boot/efi
@@ -58,7 +58,7 @@ ChrootBehind(){
     
     
     # rootpass
-    echo root:archroot | chpasswd
+    echo "root:archroot" | chpasswd
    
     # BIOS/RBM
     yes | pacman -Sy grub
@@ -69,6 +69,9 @@ ChrootBehind(){
     # yes | pacman -S grub efibootmgr
     # grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
     # grub-mkconfig -o /boot/grub/grub.cfg
+
+    useradd -m arch
+    echo "arch:pass" | chpasswd
     
     exit
     
@@ -92,4 +95,3 @@ fi
     # esac
 # }
 # Main
-
