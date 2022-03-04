@@ -38,10 +38,10 @@ ChrootFront(){
 }
 ChrootBehind(){
 
-	echo "LANG=en_US.UTF-8" > /etc/locale.conf
-	echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
-	echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen
-	echo "zh_CN.GBK GBK" >> /etc/locale.gen
+    echo "LANG=en_US.UTF-8" > /etc/locale.conf
+    echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+    echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen
+    echo "zh_CN.GBK GBK" >> /etc/locale.gen
     echo "zh_CN GB2312" >> /etc/locale.gen
     locale-gen
     
@@ -57,10 +57,9 @@ ChrootBehind(){
     
     
     # rootpass
-    echo "archroot" | passwd
+    echo root:archroot | passwd
    
     # BIOS/RBM
-    yes | pacman -Sy os-prober ntfs-3g
     yes | pacman -Sy grub
     grub-install --target=i386-pc $DEVDISK
     grub-mkconfig -o /boot/grub/grub.cfg
