@@ -25,7 +25,7 @@ ChrootFront(){
     mount "$DEVDISK$ONE" /mnt/boot/efi
 
     yes | pacman -Sy archlinux-keyring
-    echo -en "\n\n\n\n\n\n\n\n\n\n\n" | pacstrap -i /mnt base base-devel linux linux-firmware
+    echo -en "\n\n\n\n\n\n\n\n\n\n\n" | pacstrap -i /mnt base base-devel linux linux-firmware dhcpcd
 
     genfstab -U -p /mnt > /mnt/etc/fstab
     
@@ -72,7 +72,7 @@ ChrootBehind(){
 
     useradd -m arch
     echo "arch:pass" | chpasswd
-    
+    echo "arch ALL=(ALL) ALL" >> /etc/sudoers
     exit
     
 }
