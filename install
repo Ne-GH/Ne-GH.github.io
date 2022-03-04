@@ -19,8 +19,9 @@ ChrootFront(){
     yes | mkfs.fat -F 32 "$DEVDISK$ONE"
     yes | mkfs.ext4 "$DEVDISK$TWO"
 
-    mkdir -p /mnt/boot/efi
+    
     mount "$DEVDISK$TWO" /mnt
+    mkdir -p /mnt/boot/efi
     mount "$DEVDISK$ONE" /mnt/boot/efi
 
     yes | pacman -Sy archlinux-keyring
@@ -32,7 +33,7 @@ ChrootFront(){
     arch-chroot /mnt bash install.sh ChrootBehind
 
 
-    # umount /mnt/boot/efi
+    umount /mnt/boot/efi
     umount /mnt
     # reboot
 }
