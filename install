@@ -33,7 +33,7 @@ ChrootFront(){
 
 
     # umount /mnt/boot/efi
-    ummount /mnt
+    umount /mnt
     # reboot
 }
 ChrootBehind(){
