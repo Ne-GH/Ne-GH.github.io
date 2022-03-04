@@ -23,18 +23,18 @@ ChrootFront(){
     mount "$DEVDISK$TWO" /mnt
     mount "$DEVDISK$ONE" /mnt/boot/efi
 
-    yes | pacman -S archlinux-keyring
+    yes | pacman -Sy archlinux-keyring
     echo -en "\n\n\n\n\n\n\n\n\n\n\n" | pacstrap -i /mnt base base-devel linux linux-firmware
 
     genfstab -U -p /mnt > /mnt/etc/fstab
     
     cp install.sh /mnt
-    arch-chroot /mnt bash install ChrootBehind
+    arch-chroot /mnt bash install.sh ChrootBehind
 
 
     # umount /mnt/boot/efi
     ummount /mnt
-    reboot
+    # reboot
 }
 ChrootBehind(){
 
