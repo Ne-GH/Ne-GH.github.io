@@ -241,14 +241,14 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     async='async'
                   ></script>
                 </div>
-                # - | # 觉得我的主题好用的话，让更多的人知道它吧！
+                - | # 觉得我的主题好用的话，让更多的人知道它吧！
                 # <DIV>
                 # <I CLASS="FA-SOLID FA-THUMBS-UP FA-FW"></I>
                 # <A HREF="HTTPS://JEKYLL-THEME-WUK.WU-KAN.CN">
                 # JEKYLL-THEME-WUK
                 # </A>
                 # </DIV>
-                # - | # Copyright声明
+                - | # Copyright声明
                 # <div>
                 # <i class="fa-solid fa-copyright fa-fw"></i>
                 # 2023-2034 Ne-GH
