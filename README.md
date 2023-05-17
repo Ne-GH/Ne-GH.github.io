@@ -1,150 +1,89 @@
-# texture
+# 星合の空
 
-A configurable jekyll theme for simply beautiful blogs.
+欢迎访问我的主页！下面向你介绍一下我吧\~
 
-**Demo**: [samarsault.com/texture](https://samarsault.com/texture)
+<!-- .slide -->
 
-![texture theme preview](/screen1.png)
+## Contact
 
+- Address
+  - **Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China**
+- Site
+  - **<https://wu-kan.cn>**
+- [Resume](https://resume.wu-kan.cn/index.pdf)
 
-## Installation on Github Pages
+<!-- .slide vertical=true -->
 
-Add this line to your site's `_config.yml`:
-```yaml
-remote_theme: samarsault/texture
-```
+- Phone
+  - **+86 18756280097**
+- WeChat
+  - **Wu-\_-Kan**
+- E-mail:
+  - **[i[at]wu-kan.cn](mailto:i@wu-kan.cn)**
+  - **[wukan3[at]mail2.sysu.edu.cn](mailto:wukan3@mail2.sysu.edu.cn)**
 
-**NOTE: If you are forking this repo, remove `base_url: /texture` in the `_config.yml` which is required to load the required website assets**
-## Installation
+<!-- .slide -->
 
-Add this line to your Jekyll site's `Gemfile`:
+## Projects
 
-```ruby
-gem "texture"
-```
+<!-- .slide vertical=true -->
 
-And add this line to your Jekyll site's `_config.yml`:
+- [HPL-AI](https://wu-kan.cn/2021/03/14/HPL-AI/)[![Star](https://img.shields.io/github/stars/wu-kan/HPL-AI.svg)](https://github.com/wu-kan/HPL-AI)[![Fork](https://img.shields.io/github/forks/wu-kan/HPL-AI.svg)](https://github.com/wu-kan/HPL-AI/fork)
+  - An implementation of HPL-AI Mixed-Precision Benchmark based on hpl-2.3.
+  - Graduation design for undergraduate thesis.
 
-```yaml
-theme: texture
-```
+<!-- .slide vertical=true -->
 
-And then execute:
+- [SYsU-lang](https://arcsysu.github.io/SYsU-lang/)[![Star](https://img.shields.io/github/stars/arcsysu/SYsU-lang.svg)](https://github.com/arcsysu/SYsU-lang)[![Fork](https://img.shields.io/github/forks/arcsysu/SYsU-lang.svg)](https://github.com/arcsysu/SYsU-lang/fork)
+  - A mini, simple and modular compiler for SYsU (a tiny C language).
+  - Based on flex, bison and LLVM.
 
-    $ bundle
+<!-- .slide vertical=true -->
 
-Or install it yourself as:
+- [jekyll-theme-WuK](https://jekyll-theme-WuK.wu-kan.cn/)[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io)[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io/fork)
+  - A static blog system with content-first, sliding sidebar theme.
+  - Powered by Jekyll.
 
-    $ gem install texture
+<!-- .slide -->
 
-## Usage
+## Experience
 
-The "texture" key in _config.yml is used to customize the theme data.
-```yaml
-texture:
-  title: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
+- Teach Assistant of Compilation Principle, [Feb. 2022 - Jun. 2022](https://xianweiz.github.io/teach/dcs290/s2022.html)
+- Teach Assistant of Computer System Organization, Sep. 2021 - Jan. 2022 , Sep. 2022 - Jan. 2023 (expected)
+- Intern of Inference Engine, Speech & Audio Team (Beijing), Bytedance AI Lab, Feb. 2021 - Aug. 2021
+- Leader of [SYSU-SCC](https://github.com/SYSU-SCC), Mar. 2020 - Jul. 2021
 
-  social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman # format: locale/username
-```
+<!-- .slide -->
 
-**Styling**
+## Blogs
 
-Multiple header styles are supported using the "style" property under texture in `_config.yml`.
+- [我的 ASC 决赛复盘：冒险、失误与翻车](https://wu-kan.cn/2021/05/19/%E6%88%91%E7%9A%84ASC%E5%86%B3%E8%B5%9B%E5%A4%8D%E7%9B%98-%E5%86%92%E9%99%A9-%E5%A4%B1%E8%AF%AF%E4%B8%8E%E7%BF%BB%E8%BD%A6/)
+- [今日此时所想之事（二）](https://wu-kan.cn/2021/02/11/%E4%BB%8A%E6%97%A5%E6%AD%A4%E6%97%B6%E6%89%80%E6%83%B3%E4%B9%8B%E4%BA%8B-%E4%BA%8C/)
+- [十月九日](https://wu-kan.cn/2020/10/09/%E5%8D%81%E6%9C%88%E4%B9%9D%E6%97%A5/)
+- [今日此时所想之事](https://wu-kan.cn/2020/01/24/%E4%BB%8A%E6%97%A5%E6%AD%A4%E6%97%B6%E6%89%80%E6%83%B3%E4%B9%8B%E4%BA%8B/)
 
-```yaml
-texture:
-  style: [yellow|red|black|blue|green|purple]
-```
+<!-- .slide vertical=true -->
 
-For example, the blue style looks like this:
+- [基于 Jekyll 搭建个人博客](https://wu-kan.cn/2019/01/18/%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
+- [我的算法竞赛模板](https://wu-kan.cn/2019/02/04/%E6%88%91%E7%9A%84%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E6%A8%A1%E6%9D%BF/)
+- [这一年的一点感想](https://wu-kan.cn/2019/07/18/%E8%BF%99%E4%B8%80%E5%B9%B4%E7%9A%84%E4%B8%80%E7%82%B9%E6%84%9F%E6%83%B3/)
 
-![texture theme blue](/screen2.png)
+<!-- .slide -->
 
+## Toolchains
 
-**Texture Picker**
+<!-- .slide vertical=true -->
 
-You can toggle the texture picker to show/experiment various textures on your site using the showPicker variable. Remember to make it `false` for production.
+- **C/C++**, Familiar
+  - **CUDA/HIP/ROCm**, Familiar&Learning
+  - **MPI**, Familiar
+  - **OpenMP**, Familiar
+- **Python**, Familiar
 
-```yaml
-texture:
-  showPicker: [false|true] # show the texture selector(development purposes)
-```
+<!-- .slide vertical=true -->
 
-**Comments (Disqus)**
-
-Comments on posts can be enabled by specifying your disqus_shortname under texture in `_config.yml`. For example,
-```yaml
-texture:
-  disqus_shortname: games
-```
-
-**Google Analytics**
-
-It can be enabled by specifying your analytics id under texture in `_config.yml`
-```yaml
-texture:
-  analytics_id: '< YOUR ID >'
-```
-
-**Excerpts**
-
-Excerpts can be enabled by adding the following line to your `_config.yml`
-```yaml
-show_excerpts: true
-```
-
-**Toggle Navbar**
-
-```yaml
-texture:
-  showNav: true
-```
-
-**Navigation**
-
-After setting `showNav` to true navigation can be built by adding the following to your `_config.yml`
-
-```yaml
-texture:
-  navigation:
-    - title: My Work
-      url: "/my-work"
-    - title: Resume
-      url: "/resume"
-```
-
-**Layouts**
-
-- Home
-- Page
-- Post
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/samarsault/texture. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `texture.gemspec` accordingly.
-
-## Donation
-If this project help you reduce time to develop, you can give me a cup of coffee :) 
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/thelehhman)
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## More Themes
-[plainwhite](https://github.com/samarsault/plainwhite-jekyll)
+- **Markdown**, Familiar
+- **$\LaTeX$**, Familiar
+- **Shell**, Familiar&Learning
+- **Git**, Familiar
+- **VSCode**, Familiar
