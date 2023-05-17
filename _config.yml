@@ -1,43 +1,32 @@
-title: Texture Theme
-author: Ne GH
-email: printne@gmail.com
-description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-show_excerpts: true # set to true to show excerpts on the homepage
-baseurl: /texture
+# Your Website Title
+title: Ne GH's Blog
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-sass:
-  sass_dir: _sass
+# Your Website URL
+url: 'http://Ne-GH.github.io'
 
-permalink: /posts/:title/
-texture:
-  title: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
-  style: black
-  showNav: false
-  showPicker: true
+# Leave it default
+baseurl: '' 
 
-  # generate social links in footer
-  social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
-    rss: rss
- 
+# Google Analytics
+ga_index: UA-XXXXXXXX-X
+ga_cv: UA-XXXXXXXX-X
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+# Index page and Profile Information
+name: Ne GH's Blog
+tagline: Software Developer, IoT, Reverse Engineering
+pic: profile.png # profile.png can be found at /assets/images/profile.png
+description: Full Stack Developer, IoT, Reverse Engineering
+description_tiny: 'Home: +60-4 | Studied: +1-408 | Work: +60-3'
+email: printfne@gmail.com
+website: Ne-GH.github.io # do not add http://
+linkedin: realmelvinchng
+github: melvinchng
+twitter: '@realmelvinchng'
 
-# Build settings
-# theme: texture
+# Files or folders to be excluded
+exclude: [gitbook_source_code/]
 
+# All the plugins for Jekyll
 plugins:
-  - jekyll-seo-tag
-#  - jekyll-feed
+  - jekyll-sitemap
+  - wdm
