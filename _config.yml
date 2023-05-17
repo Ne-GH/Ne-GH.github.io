@@ -213,7 +213,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     document.getElementById("run_time_hour"),
                     document.getElementById("run_time_minute"),
                     document.getElementById("run_time_second"),
-                    "5/10/2023 22:00:00")// 这是我第一篇CSDN博客的时间
+                    "05/17/2023 22:00:00")// 这是我第一篇CSDN博客的时间
                   </script>
                 </div>
               - | # 不蒜子页面统计，看不懂可不改
@@ -242,17 +242,17 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   ></script>
                 </div>
                 - | # 觉得我的主题好用的话，让更多的人知道它吧！
-                # <DIV>
-                # <I CLASS="FA-SOLID FA-THUMBS-UP FA-FW"></I>
-                # <A HREF="HTTPS://JEKYLL-THEME-WUK.WU-KAN.CN">
-                # JEKYLL-THEME-WUK
-                # </A>
-                # </DIV>
+                <DIV>
+                <I CLASS="FA-SOLID FA-THUMBS-UP FA-FW"></I>
+                <A HREF="HTTPS://JEKYLL-THEME-WUK.WU-KAN.CN">
+                JEKYLL-THEME-WUK
+                </A>
+                </DIV>
                 - | # Copyright声明
-                # <div>
-                # <i class="fa-solid fa-copyright fa-fw"></i>
-                # 2023-2034 Ne-GH
-                # </div>
+                <div>
+                <i class="fa-solid fa-copyright fa-fw"></i>
+                2023-2033 Ne-GH
+                </div>
             wordcount: # 全站字数统计
               enable: false # 本地调试时建议关闭，非常影响站点生成速度（所需时间与博文数量的平方成正比）
               prepend: <i class="fa-solid fa-user-edit fa-fw"></i>
