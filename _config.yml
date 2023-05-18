@@ -30,7 +30,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append: |
           <script src="https://utteranc.es/client.js"
                   repo="ne-gh/ne-gh.github.io"
-                  issue-term="pathname"
+                  issue-term="url"
                   theme="github-light"
                   crossorigin="anonymous"
                   async="async">
