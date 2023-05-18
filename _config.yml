@@ -279,12 +279,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 网站小图标，可换成你自己的图片，改href中的部分即可
               <link
                 rel="apple-touch-icon-precomposed"
-                href="https://sm.ms/image/OIwaNiJRHcFhlAB"
+                href="https://s2.loli.net/2023/05/18/OIwaNiJRHcFhlAB.png"
               />
               <link
                 rel="shortcut
                 icon"
-                href="https://sm.ms/image/OIwaNiJRHcFhlAB"
+                href="https://s2.loli.net/2023/05/18/OIwaNiJRHcFhlAB.png"
               />
             - | # 来自lanyon的页面样式，不要改
               <link
