@@ -56,8 +56,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 href: /archive/
               - title: '<i class="fa-solid fa-tags fa-fw"></i> 标签'
                 href: /tags/
-              - title: '<i class="fa-solid fa-coffee fa-fw"></i> 打赏'
-                href: /merger/
+              - title: '<i class="fa-solid fa-coffee fa-fw"></i> 打赏(暂未开启)'
+                href: /#/
+                # href: /merger/
             simple_jekyll_search: # 侧边栏的全站搜索
               enable: true
               full_text_search: false # 可能导致缓慢的搜索和加载
