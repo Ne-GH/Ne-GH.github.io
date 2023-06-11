@@ -1,3 +1,8 @@
+---
+redirect_from: /_posts/2023-6-1-使用tar命令进行Arch备份及还原.md/
+title: 使用tar命令进行Arch备份及还原
+tags: Linux
+---
 # 备份
 
 `` cd / ``  
