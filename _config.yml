@@ -749,7 +749,7 @@ future: true # 允许发布时间在未来的文章
 
 markdown: kramdown
 redcarpet:
-  extensions: ["tables"]
+    extensions: ["fenced_code_blocks", "tables", "highlight", "with_toc_data", "strikethrough", "underline"]
 kramdown: # 见<https://kramdown.gettalong.org/options.html>
   input: GFM # 见<http://jekyllcn.com/docs/configuration/#kramdown>
   syntax_highlighter_opts: # 可见<https://kramdown.gettalong.org/syntax_highlighter/rouge.html>
