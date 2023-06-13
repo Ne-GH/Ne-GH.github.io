@@ -762,8 +762,8 @@ kramdown: # 见<https://kramdown.gettalong.org/options.html>
 #lsi: false # 为相关文章生成索引
 #safe: true # 禁用自定义插件
 #source: [your repo's top level directory] # Jekyll 读取文件的路径
-#incremental: false # 增量生成
-#highlighter: rouge # 代码高亮器
+incremental: false # 增量生成
+highlighter: rouge # 代码高亮器
 #gist:
 #  noscript: false
 #kramdown:
