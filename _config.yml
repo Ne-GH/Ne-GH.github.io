@@ -747,7 +747,7 @@ future: true # 允许发布时间在未来的文章
 # limit_posts: 999 # 限制博文数量
 # encoding: utf-8
 
-markdown: kramdown
+markdown: redcarpet
 redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "with_toc_data", "strikethrough", "underline"]
 kramdown: # 见<https://kramdown.gettalong.org/options.html>
